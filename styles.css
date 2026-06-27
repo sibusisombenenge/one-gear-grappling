@@ -244,55 +244,12 @@ html {
   box-shadow: 0 12px 24px rgba(0,0,0,.1);
 }
 
-/* SCHEDULE */
-.schedule {
-  padding: 60px 20px;
-  background: #f4f4f4;
-}
-
-.schedule-inner {
-  max-width: 1100px;
-  margin: auto;
-}
-
-.schedule h2 {
-  margin-bottom: 30px;
-  color: #111;
-}
-
-.schedule-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 15px;
-}
-
-.schedule-table th,
-.schedule-table td {
-  text-align: left;
-  padding: 12px 16px;
-  border-bottom: 1px solid #ddd;
-}
-
-.schedule-table thead tr {
-  background: #111;
-  color: #fff;
-}
-
-.schedule-table tbody tr {
-  background: #fff;
-}
-
-.schedule-table tbody tr:hover {
-  background: #f0f0f0;
-}
-
 /* INSTRUCTORS */
 .instructors {
   position: relative;
   background-image: url('coach.jpg');
   background-size: cover;
   background-position: center top;
-  padding: 0;
 }
 
 .instructors-overlay {
@@ -358,6 +315,62 @@ html {
 .instructor-card p {
   font-size: 14px;
   color: #ccc;
+}
+
+/* SCHEDULE */
+.schedule {
+  position: relative;
+  background-image: url('gym5-use.JPG');
+  background-size: cover;
+  background-position: center;
+}
+
+.schedule-overlay {
+  background: rgba(0, 0, 0, 0.80);
+  padding: 60px 20px;
+}
+
+.schedule-inner {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.schedule h2 {
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.schedule-note {
+  color: #bbb;
+  margin-bottom: 16px;
+  max-width: 600px;
+}
+
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.schedule-table th,
+.schedule-table td {
+  text-align: left;
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.schedule-table thead tr {
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+}
+
+.schedule-table tbody tr td {
+  color: #ddd;
+}
+
+.schedule-table tbody tr:hover {
+  background: rgba(255,255,255,0.05);
 }
 
 /* CONTACT */
@@ -481,8 +494,14 @@ html {
   transform: translateY(0);
 }
 
-/* ######################################################################################## */
+/* RECORD BUTTON */
+.record-btn {
+  font-size: 13px;
+}
+
+/* ################################################ */
 /* DESKTOP ENHANCEMENTS */
+/* ################################################ */
 @media (min-width: 768px) {
   .hamburger {
     display: none;
@@ -517,12 +536,12 @@ html {
     max-width: 1100px;
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
   }
 
   .programs h2 {
-    grid-column: span 2;
+    grid-column: span 3;
   }
 
   .program {
