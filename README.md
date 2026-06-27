@@ -36,4 +36,4 @@ Deployed via Netlify with GitHub integration — pushes to `main` trigger automa
 
 ## Status
 
-In progress — awaiting final content from the gym (contact details, indemnity form).
+In progress — awaiting final content from the gym.
