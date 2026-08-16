@@ -1,289 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ONE GEAR GRAPPLING</title>
-  
-  <!-- SEO Meta Tags -->
-  <meta name="description" content="One Gear Grappling offers Stand-Up and Brazilian Jiu-Jitsu training for all levels in Johannesburg. Led by former EFC Heavyweight Champion Andrew van Zyl.">
-  <meta name="keywords" content="MMA, BJJ, Boxing, Kickboxing, Johannesburg, Parktown, Martial Arts, Andrew van Zyl">
-
-  <!-- Open Graph / WhatsApp Preview -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="ONE GEAR GRAPPLING | MMA & BJJ in Johannesburg">
-  <meta property="og:description" content="Stand-Up & Brazilian Jiu-Jitsu classes for all levels. Book a free trial today.">
-  <meta property="og:image" content="https://www.onegeargrappling.co.za/assets/logo.jpg">
-  <meta property="og:url" content="https://www.onegeargrappling.co.za">
-
-  <!-- Local Business JSON-LD Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SportsActivityLocation",
-    "name": "One Gear Grappling",
-    "image": "https://www.onegeargrappling.co.za/assets/logo.jpg",
-    "description": "Stand-Up and Brazilian Jiu-Jitsu training for adults and young athletes, led by former EFC Heavyweight Champion Andrew van Zyl.",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "20 Wellington Rd, Parktown",
-      "addressLocality": "Johannesburg",
-      "addressRegion": "Gauteng",
-      "postalCode": "2193",
-      "addressCountry": "ZA"
-    },
-    "telephone": "+27813020360",
-    "email": "coach@onegeargrappling.co.za",
-    "priceRange": "R500-R750"
-  }
-  </script>
-
-  <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Gear Grappling</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <img src="assets/logo.png" alt="One Gear Grappling Logo" class="logo-img">
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#instructor">Instructor</a></li>
+                <li><a href="#programs">Programs</a></li>
+                <li><a href="#schedule">Schedule</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
-  <header class="nav">
-    <div class="nav-inner">
-      <div class="logo">
-        <img src="assets/logo.jpg" alt="One Gear Grappling" class="logo-img">
-      </div>
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <nav class="nav-links" id="nav-links">
-        <a href="#home" onclick="closeMenu()">Home</a>
-        <a href="#about" onclick="closeMenu()">About</a>
-        <a href="#instructor" onclick="closeMenu()">Instructor</a>
-        <a href="#programs" onclick="closeMenu()">Programs</a>
-        <a href="#schedule" onclick="closeMenu()">Schedule</a>
-        <a href="#contact" onclick="closeMenu()">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-
+    <!-- Hero Section -->
     <section id="home" class="hero">
-      <h1>Mixed Martial Arts Training</h1>
-      <p>Stand-Up & Brazilian Jiu-Jitsu classes for all levels.</p>
-      <a href="#contact" class="btn primary">Book a Free Trial</a>
+        <div class="hero-content">
+            <h1 class="hero-title">ONE GEAR GRAPPLING</h1>
+            <h2 class="hero-subtitle">Mixed Martial Arts Training</h2>
+            <p>Brazilian Jiu-Jitsu & Stand-Up classes for all levels.</p>
+            <a href="#contact" class="btn primary btn-large">Book a Free Trial</a>
+        </div>
     </section>
 
-    <section id="about" class="about fade-in">
-      <div class="about-inner">
-        <div class="about-text">
-          <h2>About Us</h2>
-          <p>
-            One Gear Grappling offers Stand-Up and Brazilian Jiu-Jitsu training
-            for adults and young athletes. Based at Parktown Boys' High School
-            in Johannesburg, the gym is led by former EFC Heavyweight Champion
-            Andrew van Zyl.
-          </p>
-          <p>
-            Whether you're stepping on the mat for the first time or looking
-            to sharpen your skills, everyone is welcome here.
-          </p>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>One Gear Grappling offers Stand-Up and Brazilian Jiu-Jitsu training for adults and young athletes. Based at Parktown Boys' High School in Johannesburg, the gym is led by former EFC Heavyweight Champion Andrew van Zyl.</p>
+            <p>Whether you're stepping on the mat for the first time or looking to sharpen your skills, everyone is welcome here.</p>
+            <div class="stats">
+                <div class="stat-item">
+                    <h3>10+</h3>
+                    <p>Years of Experience</p>
+                </div>
+                <div class="stat-item">
+                    <h3>1</h3>
+                    <p>Expert Instructor</p>
+                </div>
+            </div>
         </div>
-        <div class="about-stats">
-          <div class="stat">
-            <span class="stat-number">10+</span>
-            <span class="stat-label">Years of Experience</span>
-          </div>
-          <div class="stat">
-            <span class="stat-number">1</span>
-            <span class="stat-label">Expert Instructor</span>
-          </div>
-        </div>
-      </div>
     </section>
 
-    <section id="instructor" class="instructors fade-in">
-      <div class="instructors-overlay">
-        <div class="instructors-inner">
-          <h2>Instructor</h2>
-          <div class="instructor-grid">
-            <article class="instructor-card">
-              <div class="instructor-avatar">AV</div>
-              <h3>Andrew van Zyl</h3>
-              <span class="instructor-title">Head Coach — Stand-Up & BJJ | BJJ Black Belt (Professor)</span>
-              <p>
-                Andrew van Zyl is a BJJ black belt with a professor stripe and
-                a decorated MMA career spanning 2004 to 2018. A former EFC
-                Heavyweight Champion, he brings over a decade of martial arts
-                experience to every session — focused on discipline, technique,
-                and helping each athlete reach their potential.
-              </p>
-            </article>
-          </div>
+    <!-- Instructor Section -->
+    <section id="instructor" class="instructors">
+        <div class="instructors-overlay">
+            <div class="container">
+                <h2>Instructor</h2>
+                <div class="instructor-card">
+                    <div class="avatar">AV</div>
+                    <div class="instructor-info">
+                        <h3>Andrew van Zyl</h3>
+                        <p class="role">Head Coach — Stand-Up & BJJ | BJJ Black Belt (Professor)</p>
+                        <p class="bio">Andrew van Zyl is a BJJ black belt with a professor stripe and a decorated MMA career spanning 2004 to 2018. A former EFC Heavyweight Champion, he brings over a decade of martial arts experience to every session — focused on discipline, technique, and helping each athlete reach their potential.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
 
-    <section id="programs" class="programs fade-in">
-      <h2>Programs</h2>
-      <article class="program">
-        <h3>Boxing / Kickboxing</h3>
-        <p>Striking classes covering boxing, kickboxing, footwork, combinations, and conditioning — suitable for all experience levels.</p>
-        <div class="program-price">R550 <span>/month</span></div>
-        <button class="btn secondary" onclick="prefillContact('Boxing / Kickboxing')">Get in Touch</button>
-      </article>
-      <article class="program">
-        <h3>Brazilian Jiu-Jitsu</h3>
-        <p>Structured BJJ classes focusing on ground control, submissions, and positional training under a BJJ black belt professor.</p>
-        <div class="program-price">R550 <span>/month</span></div>
-        <button class="btn secondary" onclick="prefillContact('Brazilian Jiu-Jitsu')">Get in Touch</button>
-      </article>
-      <article class="program">
-        <h3>MMA</h3>
-        <p>A blend of Stand-Up and BJJ for those who want to train the complete game — striking, takedowns, and ground work combined.</p>
-        <div class="program-price">R750 <span>/month</span></div>
-        <button class="btn secondary" onclick="prefillContact('MMA')">Get in Touch</button>
-      </article>
-      <article class="program">
-        <h3>Young Guns</h3>
-        <p>A dedicated class offering BJJ/Stand-up/MMA open to all young athletes looking to build discipline, fitness, and martial arts fundamentals.</p>
-        <div class="program-price">R500 <span>/month</span></div>
-        <button class="btn secondary" onclick="prefillContact('Young Guns')">Get in Touch</button>
-      </article>
+    <!-- Programs Section -->
+    <section id="programs" class="programs">
+        <div class="container">
+            <h2 class="text-center">Programs</h2>
+            <div class="program-grid">
+                <div class="program">
+                    <h3>Boxing / Kickboxing</h3>
+                    <p>Striking classes covering boxing, kickboxing, footwork, combinations, and conditioning — suitable for all experience levels.</p>
+                    <p class="program-price">R550 <small>/month</small></p>
+                    <a href="#contact" class="btn secondary">Get in Touch</a>
+                </div>
+                <div class="program">
+                    <h3>Brazilian Jiu-Jitsu</h3>
+                    <p>Structured BJJ classes focusing on ground control, submissions, and positional training under a BJJ black belt professor.</p>
+                    <p class="program-price">R550 <small>/month</small></p>
+                    <a href="#contact" class="btn secondary">Get in Touch</a>
+                </div>
+                <div class="program">
+                    <h3>MMA</h3>
+                    <p>A blend of Stand-Up and BJJ for those who want to train the complete game — striking, takedowns, and ground work combined.</p>
+                    <p class="program-price">R750 <small>/month</small></p>
+                    <a href="#contact" class="btn secondary">Get in Touch</a>
+                </div>
+                <div class="program">
+                    <h3>Young Guns</h3>
+                    <p>A dedicated class offering BJJ/Stand-up/MMA open to all young athletes looking to build discipline, fitness, and martial arts fundamentals.</p>
+                    <p class="program-price">R500 <small>/month</small></p>
+                    <a href="#contact" class="btn secondary">Get in Touch</a>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="schedule" class="schedule fade-in">
-      <div class="schedule-overlay">
-        <div class="schedule-inner">
-          <h2>Schedule</h2>
-          <p class="schedule-note">
-            Sessions run throughout the week. The times below give a general
-            indication — exact times are confirmed via the training WhatsApp group.
-            Contact Andrew directly to get added and stay in the loop.
-          </p>
-          <table class="schedule-table">
-            <thead>
-              <tr>
-                <th>Day</th>
-                <th>Time</th>
-                <th>Class</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Tuesday</td>
-                <td>06:15 – 07:00</td>
-                <td>Morning Session</td>
-              </tr>
-              <tr>
-                <td>Wednesday</td>
-                <td>06:15 – 07:00</td>
-                <td>Morning Session</td>
-              </tr>
-              <tr>
-                <td>Thursday</td>
-                <td>06:15 – 07:00</td>
-                <td>Morning Session</td>
-              </tr>
-              <tr>
-                <td>Thursday</td>
-                <td>14:15 – 15:00</td>
-                <td>Young Guns</td>
-              </tr>
-              <tr>
-                <td>Saturday</td>
-                <td>09:00 – 10:00</td>
-                <td>Rolling</td>
-              </tr>
-            </tbody>
-          </table>
+    <!-- Schedule Section -->
+    <section id="schedule" class="schedule">
+        <div class="schedule-overlay">
+            <div class="container">
+                <h2>Schedule</h2>
+                <p>Sessions run throughout the week. The times below give a general indication — exact times are confirmed via the training WhatsApp group.<br>Contact Andrew directly to get added and stay in the loop.</p>
+                <div class="table-responsive">
+                    <table class="schedule-table">
+                        <thead>
+                            <tr>
+                                <th>Day</th>
+                                <th>Time</th>
+                                <th>Class</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Tuesday</td><td>06:15 – 07:00</td><td>Morning Session</td></tr>
+                            <tr><td>Wednesday</td><td>06:15 – 07:00</td><td>Morning Session</td></tr>
+                            <tr><td>Thursday</td><td>06:15 – 07:00</td><td>Morning Session</td></tr>
+                            <tr><td>Thursday</td><td>14:15 – 15:00</td><td>Young Guns</td></tr>
+                            <tr><td>Saturday</td><td>09:00 – 10:00</td><td>Rolling</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
 
-    <section id="contact" class="contact fade-in">
-      <div class="contact-inner">
-        <h2>Contact</h2>
-        <p>Ready to start? Get in touch and Andrew will take it from there.</p>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>Ready to start? Get in touch and Andrew will take it from there.</p>
+            
+            <div class="contact-info-grid">
+                <div>
+                    <h4>Email</h4>
+                    <p>coach@onegeargrappling.co.za</p>
+                </div>
+                <div>
+                    <h4>WhatsApp</h4>
+                    <p>+27 81 303 0360</p>
+                </div>
+                <div>
+                    <h4>Location</h4>
+                    <p>Parktown Boys' High School, 20 Wellington Rd, Parktown, Johannesburg, 2193</p>
+                </div>
+            </div>
 
-        <div class="contact-details">
-          <div class="contact-item">
-            <span class="contact-label">Email</span>
-            <a href="mailto:coach@onegeargrappling.co.za">coach@onegeargrappling.co.za</a>
-          </div>
-          <div class="contact-item">
-            <span class="contact-label">WhatsApp</span>
-            <a href="https://wa.me/27813020360" target="_blank">+27 81 302 0360</a>
-          </div>
-          <div class="contact-item">
-            <span class="contact-label">Location</span>
-            <span>Parktown Boys' High School, 20 Wellington Rd, Parktown, Johannesburg, 2193</span>
-          </div>
+            <div class="indemnity-box">
+                <p><strong>Before your first session</strong> — all new members must complete a signed indemnity form. Download it below, sign it, and bring it along or send it to Andrew via WhatsApp before training.</p>
+                <a href="assets/indemnity.pdf" class="btn secondary" target="_blank">Download Indemnity Form</a>
+            </div>
+
+            <form id="contactForm" class="contact-form">
+                <div class="form-group">
+                    <label>First Name</label>
+                    <input type="text" id="firstName" placeholder="First name">
+                </div>
+                <div class="form-group">
+                    <label>Last Name</label>
+                    <input type="text" id="lastName" placeholder="Last name">
+                </div>
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="tel" id="phone" placeholder="+27 81 234 5678">
+                </div>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" id="email" placeholder="your@email.com">
+                </div>
+                <div class="form-group">
+                    <label>Program of Interest</label>
+                    <select id="programSelect">
+                        <option value="">Select a program</option>
+                        <option value="Boxing / Kickboxing">Boxing / Kickboxing</option>
+                        <option value="BJJ">Brazilian Jiu-Jitsu</option>
+                        <option value="MMA">MMA</option>
+                        <option value="Young Guns">Young Guns</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Message</label>
+                    <textarea id="message" rows="4" placeholder="I'd like to book a free trial..."></textarea>
+                </div>
+                <button type="button" class="btn primary full-width" onclick="sendWhatsApp()">Send via WhatsApp</button>
+                <p class="form-disclaimer">Clicking send will open WhatsApp with your details pre-filled in a message to Andrew.</p>
+            </form>
         </div>
-
-        <div class="indemnity-notice">
-          <p>
-            <strong>Before your first session</strong> — all new members must complete a signed indemnity form.
-            Download it below, sign it, and bring it along or send it to Andrew via WhatsApp before training.
-          </p>
-          <a href="assets/indemnity.pdf" download class="btn secondary">Download Indemnity Form</a>
-        </div>
-
-        <!-- Netlify Enabled Form -->
-        <form class="contact-form" id="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
-          
-          <!-- Hidden bot field to trap automated spam -->
-          <p style="display: none;">
-            <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
-          </p>
-          
-          <!-- Hidden field to tell Netlify the form's name -->
-          <input type="hidden" name="form-name" value="contact" />
-
-          <div class="form-group">
-            <label for="fname">First Name</label>
-            <input type="text" id="fname" name="fname" placeholder="First name" required>
-          </div>
-          <div class="form-group">
-            <label for="lname">Last Name</label>
-            <input type="text" id="lname" name="lname" placeholder="Last name" required>
-          </div>
-          <div class="form-group">
-            <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone" placeholder="+27 81 234 5678" required>
-            <span class="field-error" id="phone-error"></span>
-          </div>
-          <div class="form-group">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" placeholder="your@email.com" required>
-            <span class="field-error" id="email-error"></span>
-          </div>
-          <div class="form-group">
-            <label for="program">Program of Interest</label>
-            <select id="program" name="program">
-              <option value="">Select a program</option>
-              <option value="Boxing / Kickboxing">Boxing / Kickboxing</option>
-              <option value="Brazilian Jiu-Jitsu">Brazilian Jiu-Jitsu</option>
-              <option value="MMA">MMA</option>
-              <option value="Young Guns">Young Guns</option>
-              <option value="Not sure yet">Not sure yet</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="4" placeholder="I'd like to book a free trial..."></textarea>
-          </div>
-          <button type="submit" class="btn primary" id="submit-btn">Send via WhatsApp</button>
-          <p class="form-note">Clicking send will open WhatsApp with your details pre-filled in a message to Andrew.</p>
-          <p id="form-feedback" class="form-feedback"></p>
-        </form>
-      </div>
     </section>
 
-  </main>
-
-  <footer class="footer">
-    <p>&copy; 2026 One Gear Grappling. All rights reserved.</p>
-  </footer>
-
-  <script src="js/script.js"></script>
-
+    <script>
+        function sendWhatsApp() {
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const program = document.getElementById('programSelect').value;
+            const message = document.getElementById('message').value;
+            
+            const text = `Hi Andrew, my name is ${firstName} ${lastName}. I am interested in the ${program} program. ${message}`;
+            const encodedText = encodeURIComponent(text);
+            const whatsappUrl = `https://wa.me/27813030360?text=${encodedText}`;
+            
+            window.open(whatsappUrl, '_blank');
+        }
+    </script>
 </body>
 </html>
