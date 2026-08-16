@@ -10,14 +10,21 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <img src="assets/logo.jpg" alt="One Gear Grappling Logo" class="logo-img">
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#instructor">Instructor</a></li>
-                <li><a href="#programs">Programs</a></li>
-                <li><a href="#schedule">Schedule</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <a href="#home"><img src="assets/logo.jpg" alt="One Gear Grappling Logo" class="logo-img"></a>
+            
+            <!-- Hamburger Menu Icon -->
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#programs" onclick="toggleMenu()">Programs</a></li>
+                <li><a href="#instructor" onclick="toggleMenu()">Instructor</a></li>
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#schedule" onclick="toggleMenu()">Schedule</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -32,21 +39,120 @@
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
+    <!-- Programs Section (Moved Up) -->
+    <section id="programs" class="programs">
         <div class="container">
-            <h2>About Us</h2>
-            <p>One Gear Grappling offers Stand-Up and Brazilian Jiu-Jitsu training for adults and young athletes. Based at Parktown Boys' High School in Johannesburg, the gym is led by former EFC Heavyweight Champion Andrew van Zyl.</p>
-            <p>Whether you're stepping on the mat for the first time or looking to sharpen your skills, everyone is welcome here.</p>
-            <div class="stats">
-                <div class="stat-item">
-                    <h3>10+</h3>
-                    <p>Years of Experience</p>
+            <h2 class="text-center">Programs</h2>
+            <div class="program-grid" id="programGrid">
+                
+                <!-- Program 1 -->
+                <div class="program" id="prog1">
+                    <div class="program-inner">
+                        <div class="program-front">
+                            <div>
+                                <h3>Boxing / Kickboxing</h3>
+                                <p>Striking classes covering boxing, kickboxing, footwork, combinations, and conditioning — suitable for all experience levels.</p>
+                                <p class="program-price">R550 <small>/month</small></p>
+                            </div>
+                            <div class="button-group">
+                                <button class="btn primary full-width" onclick="expandProgram('prog1')">Find Out More</button>
+                                <a href="#contact" class="btn secondary full-width">Book Trial</a>
+                            </div>
+                        </div>
+                        <div class="program-back">
+                            <div>
+                                <h3>Boxing / Kickboxing Details</h3>
+                                <p>Our striking program is designed to build devastating power, speed, and precision. You will learn the mechanics of European Boxing mixed with Dutch-style Kickboxing. Sessions include pad work, heavy bag conditioning, and controlled technical sparring to test your skills safely.</p>
+                            </div>
+                            <div class="button-group">
+                                <button class="btn secondary full-width" onclick="closeProgram()">Back</button>
+                                <a href="#contact" class="btn primary full-width">Join Now</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="stat-item">
-                    <h3>1</h3>
-                    <p>Expert Instructor</p>
+
+                <!-- Program 2 -->
+                <div class="program" id="prog2">
+                    <div class="program-inner">
+                        <div class="program-front">
+                            <div>
+                                <h3>Brazilian Jiu-Jitsu</h3>
+                                <p>Structured BJJ classes focusing on ground control, submissions, and positional training under a BJJ black belt professor.</p>
+                                <p class="program-price">R550 <small>/month</small></p>
+                            </div>
+                            <div class="button-group">
+                                <button class="btn primary full-width" onclick="expandProgram('prog2')">Find Out More</button>
+                                <a href="#contact" class="btn secondary full-width">Book Trial</a>
+                            </div>
+                        </div>
+                        <div class="program-back">
+                            <div>
+                                <h3>Brazilian Jiu-Jitsu Details</h3>
+                                <p>BJJ is the ultimate grappling art, empowering smaller individuals to submit larger opponents using leverage and technique. Under Professor Andrew van Zyl, you will dive deep into gi and no-gi techniques, focusing on sweeps, guard passing, escapes, and submission holds.</p>
+                            </div>
+                            <div class="button-group">
+                                <button class="btn secondary full-width" onclick="closeProgram()">Back</button>
+                                <a href="#contact" class="btn primary full-width">Join Now</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
+                <!-- Program 3 -->
+                <div class="program" id="prog3">
+                    <div class="program-inner">
+                        <div class="program-front">
+                            <div>
+                                <h3>MMA</h3>
+                                <p>A blend of Stand-Up and BJJ for those who want to train the complete game — striking, takedowns, and ground work combined.</p>
+                                <p class="program-price">R750 <small>/month</small></p>
+                            </div>
+                            <div class="button-group">
+                                <button class="btn primary full-width" onclick="expandProgram('prog3')">Find Out More</button>
+                                <a href="#contact" class="btn secondary full-width">Book Trial</a>
+                            </div>
+                        </div>
+                        <div class="program-back">
+                            <div>
+                                <h3>Mixed Martial Arts Details</h3>
+                                <p>To succeed in MMA, you need to seamlessly transition between striking, wrestling, and ground combat. This comprehensive program blends elite kickboxing with cage wrestling and submission grappling. It is perfect for those looking to compete, or wanting the ultimate challenge.</p>
+                            </div>
+                            <div class="button-group">
+                                <button class="btn secondary full-width" onclick="closeProgram()">Back</button>
+                                <a href="#contact" class="btn primary full-width">Join Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Program 4 -->
+                <div class="program" id="prog4">
+                    <div class="program-inner">
+                        <div class="program-front">
+                            <div>
+                                <h3>Young Guns</h3>
+                                <p>A dedicated class offering BJJ/Stand-up/MMA open to all young athletes looking to build discipline, fitness, and martial arts fundamentals.</p>
+                                <p class="program-price">R500 <small>/month</small></p>
+                            </div>
+                            <div class="button-group">
+                                <button class="btn primary full-width" onclick="expandProgram('prog4')">Find Out More</button>
+                                <a href="#contact" class="btn secondary full-width">Book Trial</a>
+                            </div>
+                        </div>
+                        <div class="program-back">
+                            <div>
+                                <h3>Young Guns Details</h3>
+                                <p>Martial arts are unparalleled for instilling confidence, respect, and physical fitness in youth. Our Young Guns program scales down advanced concepts into an engaging, safe, and structured format. We focus on bully-proofing, coordination, and character building.</p>
+                            </div>
+                            <div class="button-group">
+                                <button class="btn secondary full-width" onclick="closeProgram()">Back</button>
+                                <a href="#contact" class="btn primary full-width">Join Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -68,104 +174,21 @@
         </div>
     </section>
 
-    <!-- Programs Section -->
-    <section id="programs" class="programs">
+    <!-- About Section -->
+    <section id="about" class="about">
         <div class="container">
-            <h2 class="text-center">Programs</h2>
-            <div class="program-grid" id="programGrid">
-                
-                <!-- Program 1 -->
-                <div class="program" id="prog1">
-                    <div class="program-inner">
-                        <div class="program-front">
-                            <h3>Boxing / Kickboxing</h3>
-                            <p>Striking classes covering boxing, kickboxing, footwork, combinations, and conditioning — suitable for all experience levels.</p>
-                            <p class="program-price">R550 <small>/month</small></p>
-                            <div class="button-group">
-                                <button class="btn primary full-width" onclick="expandProgram('prog1')">Find Out More</button>
-                                <a href="#contact" class="btn secondary full-width">Book Trial</a>
-                            </div>
-                        </div>
-                        <div class="program-back">
-                            <h3>Boxing / Kickboxing Details</h3>
-                            <p>Our striking program is designed to build devastating power, speed, and precision. You will learn the mechanics of European Boxing mixed with Dutch-style Kickboxing. Sessions include pad work, heavy bag conditioning, shadow boxing, and controlled technical sparring to test your skills safely.</p>
-                            <div class="button-group">
-                                <button class="btn secondary full-width" onclick="closeProgram()">Back</button>
-                                <a href="#contact" class="btn primary full-width">Join Now</a>
-                            </div>
-                        </div>
-                    </div>
+            <h2>About Us</h2>
+            <p>One Gear Grappling offers Stand-Up and Brazilian Jiu-Jitsu training for adults and young athletes. Based at Parktown Boys' High School in Johannesburg, the gym is led by former EFC Heavyweight Champion Andrew van Zyl.</p>
+            <p>Whether you're stepping on the mat for the first time or looking to sharpen your skills, everyone is welcome here.</p>
+            <div class="stats">
+                <div class="stat-item">
+                    <h3>10+</h3>
+                    <p>Years of Experience</p>
                 </div>
-
-                <!-- Program 2 -->
-                <div class="program" id="prog2">
-                    <div class="program-inner">
-                        <div class="program-front">
-                            <h3>Brazilian Jiu-Jitsu</h3>
-                            <p>Structured BJJ classes focusing on ground control, submissions, and positional training under a BJJ black belt professor.</p>
-                            <p class="program-price">R550 <small>/month</small></p>
-                            <div class="button-group">
-                                <button class="btn primary full-width" onclick="expandProgram('prog2')">Find Out More</button>
-                                <a href="#contact" class="btn secondary full-width">Book Trial</a>
-                            </div>
-                        </div>
-                        <div class="program-back">
-                            <h3>Brazilian Jiu-Jitsu Details</h3>
-                            <p>BJJ is the ultimate grappling art, empowering smaller individuals to submit larger opponents using leverage and technique. Under Professor Andrew van Zyl, you will dive deep into gi and no-gi techniques, focusing on sweeps, guard passing, escapes, and submission holds in a highly analytical yet intense environment.</p>
-                            <div class="button-group">
-                                <button class="btn secondary full-width" onclick="closeProgram()">Back</button>
-                                <a href="#contact" class="btn primary full-width">Join Now</a>
-                            </div>
-                        </div>
-                    </div>
+                <div class="stat-item">
+                    <h3>1</h3>
+                    <p>Expert Instructor</p>
                 </div>
-
-                <!-- Program 3 -->
-                <div class="program" id="prog3">
-                    <div class="program-inner">
-                        <div class="program-front">
-                            <h3>MMA</h3>
-                            <p>A blend of Stand-Up and BJJ for those who want to train the complete game — striking, takedowns, and ground work combined.</p>
-                            <p class="program-price">R750 <small>/month</small></p>
-                            <div class="button-group">
-                                <button class="btn primary full-width" onclick="expandProgram('prog3')">Find Out More</button>
-                                <a href="#contact" class="btn secondary full-width">Book Trial</a>
-                            </div>
-                        </div>
-                        <div class="program-back">
-                            <h3>Mixed Martial Arts Details</h3>
-                            <p>To succeed in MMA, you need to seamlessly transition between striking, wrestling, and ground combat. This comprehensive program blends elite kickboxing with cage wrestling and submission grappling. It is perfect for those looking to compete, or simply wanting the ultimate, all-encompassing physical challenge.</p>
-                            <div class="button-group">
-                                <button class="btn secondary full-width" onclick="closeProgram()">Back</button>
-                                <a href="#contact" class="btn primary full-width">Join Now</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Program 4 -->
-                <div class="program" id="prog4">
-                    <div class="program-inner">
-                        <div class="program-front">
-                            <h3>Young Guns</h3>
-                            <p>A dedicated class offering BJJ/Stand-up/MMA open to all young athletes looking to build discipline, fitness, and martial arts fundamentals.</p>
-                            <p class="program-price">R500 <small>/month</small></p>
-                            <div class="button-group">
-                                <button class="btn primary full-width" onclick="expandProgram('prog4')">Find Out More</button>
-                                <a href="#contact" class="btn secondary full-width">Book Trial</a>
-                            </div>
-                        </div>
-                        <div class="program-back">
-                            <h3>Young Guns Details</h3>
-                            <p>Martial arts are unparalleled for instilling confidence, respect, and physical fitness in youth. Our Young Guns program scales down advanced BJJ and striking concepts into an engaging, safe, and highly structured format. We focus on bully-proofing, athletic coordination, and character building on and off the mats.</p>
-                            <div class="button-group">
-                                <button class="btn secondary full-width" onclick="closeProgram()">Back</button>
-                                <a href="#contact" class="btn primary full-width">Join Now</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>
@@ -207,7 +230,6 @@
             </div>
             
             <div class="contact-wrapper">
-                <!-- Left Side: Info & Indemnity -->
                 <div class="contact-left">
                     <div class="contact-info-list">
                         <div class="info-block">
@@ -231,7 +253,6 @@
                     </div>
                 </div>
 
-                <!-- Right Side: Form -->
                 <div class="contact-right">
                     <form id="contactForm" class="contact-form">
                         <div class="form-row">
@@ -269,7 +290,46 @@
         </div>
     </section>
 
+    <!-- Footer Section -->
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h2>ONE GEAR GRAPPLING</h2>
+                <p>Mixed Martial Arts Training in Johannesburg.</p>
+            </div>
+            <div class="footer-links-col">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#programs">Programs</a></li>
+                    <li><a href="#instructor">Instructor</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#schedule">Schedule</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom text-center">
+            <p>&copy; 2026 One Gear Grappling. All rights reserved.</p>
+        </div>
+    </footer>
+
     <script>
+        // Force scroll to top on load to fix the jumping issue
+        window.history.scrollRestoration = 'manual';
+        window.onload = function() {
+            setTimeout(function() {
+                window.scrollTo(0, 0);
+            }, 10);
+        };
+
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        // Smoother Expand/Collapse Logic
         function expandProgram(id) {
             const grid = document.getElementById('programGrid');
             const cards = grid.querySelectorAll('.program');
@@ -278,21 +338,27 @@
                 if(card.id === id) {
                     card.classList.add('expanded');
                     card.classList.remove('hidden');
+                    
+                    // Smooth scroll slightly down to center the expanded card on mobile
+                    setTimeout(() => { 
+                        card.scrollIntoView({ behavior: 'smooth', block: 'center' }); 
+                    }, 400);
                 } else {
                     card.classList.add('hidden');
                     card.classList.remove('expanded');
                 }
             });
-            setTimeout(() => { document.getElementById('programs').scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 300);
         }
 
         function closeProgram() {
             const grid = document.getElementById('programGrid');
             const cards = grid.querySelectorAll('.program');
+            
             cards.forEach(card => {
                 card.classList.remove('expanded');
                 card.classList.remove('hidden');
             });
+            // Removed the aggressive scroll back to fix the clunky jump
         }
 
         function sendWhatsApp() {

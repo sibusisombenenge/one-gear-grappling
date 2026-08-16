@@ -1,5 +1,6 @@
 /* --- Base Resets & Typography --- */
 * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+html { scroll-behavior: smooth; }
 body { background-color: #ffffff; color: #333; line-height: 1.6; }
 .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 .text-center { text-align: center; }
@@ -12,31 +13,53 @@ body { background-color: #ffffff; color: #333; line-height: 1.6; }
 .btn.secondary:hover { background: #555; }
 .btn-large { padding: 16px 32px; font-size: 16px; margin-top: 24px; }
 .full-width { width: 100%; }
-.button-group { display: flex; gap: 10px; margin-top: auto; padding-top: 20px; }
+.button-group { display: flex; gap: 10px; margin-top: auto; padding-top: 20px; width: 100%; }
 
-/* --- Navigation --- */
-.navbar { background: #000; color: #fff; padding: 15px 0; }
+/* --- Navigation & Header --- */
+.navbar { background: #000; color: #fff; padding: 15px 0; position: relative; z-index: 100; }
 .nav-container { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; }
+.logo-img { height: 60px; width: auto; display: block; filter: invert(1); }
+
 .nav-links { list-style: none; display: flex; gap: 20px; }
-.nav-links a { color: #fff; text-decoration: none; font-size: 14px; }
-.logo-img { height: 70px; width: auto; display: block; filter: invert(1); }
+.nav-links a { color: #fff; text-decoration: none; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; }
+
+/* Hamburger Menu CSS */
+.menu-toggle { display: none; flex-direction: column; cursor: pointer; gap: 6px; padding: 10px; }
+.menu-toggle .bar { width: 28px; height: 3px; background-color: #fff; transition: 0.3s; }
 
 /* --- Hero Section --- */
-.hero { background: #111; color: #fff; padding: 140px 20px; text-align: center; }
-.hero-title { font-size: 32px; letter-spacing: 2px; color: #fff; margin-bottom: 5px; }
+.hero { background: #111; color: #fff; padding: 120px 20px; text-align: center; }
+.hero-title { font-size: 36px; letter-spacing: 2px; color: #fff; margin-bottom: 10px; }
 .hero-subtitle { font-size: 18px; font-weight: normal; color: #aaa; margin-bottom: 15px; }
-.hero p { color: #888; margin-bottom: 10px; }
+.hero p { color: #888; margin-bottom: 20px; }
 
 /* --- Shared Section Spacing --- */
-.about, .programs, .contact { padding: 100px 20px; }
-.instructors-overlay, .schedule-overlay { padding: 100px 20px; background: rgba(0, 0, 0, 0.85); color: #fff; }
+.about, .programs, .contact { padding: 80px 20px; }
+.instructors-overlay, .schedule-overlay { padding: 80px 20px; background: rgba(0, 0, 0, 0.85); color: #fff; }
 
-/* --- About Section --- */
-.about h2 { margin-bottom: 20px; }
-.about p { margin-bottom: 15px; color: #555; }
-.stats { display: flex; gap: 40px; margin-top: 40px; }
-.stat-item h3 { font-size: 32px; color: #111; }
-.stat-item p { font-size: 12px; color: #777; text-transform: uppercase; }
+/* --- Programs Section (Fixed Card Heights for Mobile) --- */
+.programs h2 { margin-bottom: 40px; }
+.program-grid { display: grid; grid-template-columns: 1fr; gap: 30px; perspective: 1000px; }
+
+/* Hard height forces the buttons to stay inside the black box */
+.program { height: 520px; background-color: transparent; perspective: 1000px; transition: all 0.5s ease; }
+.program-inner { position: relative; width: 100%; height: 100%; transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1); transform-style: preserve-3d; }
+.program.expanded .program-inner { transform: rotateY(180deg); }
+.program.hidden { display: none; }
+.program.expanded { grid-column: 1 / -1; }
+
+/* Flexbox keeps text at the top and buttons locked at the bottom */
+.program-front, .program-back { 
+    position: absolute; width: 100%; height: 100%; -webkit-backface-visibility: hidden; backface-visibility: hidden; 
+    padding: 30px 25px; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); 
+    display: flex; flex-direction: column; justify-content: space-between; 
+}
+.program-front { background-color: #fff; border: 1px solid #eaeaea; color: #333; }
+.program-back { background-color: #111; border: 1px solid #333; color: #fff; transform: rotateY(180deg); }
+.program-front h3, .program-back h3 { margin-bottom: 15px; font-size: 22px; }
+.program-front p { font-size: 14px; color: #666; }
+.program-back p { font-size: 15px; color: #ccc; line-height: 1.6; }
+.program-price { font-size: 24px; font-weight: bold; color: #111; margin-top: 15px; }
 
 /* --- Instructor Section --- */
 .instructors { position: relative; background-image: url('../assets/coach.jpg'); background-size: cover; background-position: center; background-attachment: fixed; }
@@ -46,22 +69,12 @@ body { background-color: #ffffff; color: #333; line-height: 1.6; }
 .instructor-info .role { font-size: 12px; color: #aaa; margin-bottom: 15px; }
 .instructor-info .bio { font-size: 14px; color: #ddd; line-height: 1.5; }
 
-/* --- Programs Section (2x2 Grid Fix) --- */
-.programs h2 { margin-bottom: 40px; }
-.program-grid { display: grid; grid-template-columns: 1fr; gap: 30px; perspective: 1000px; }
-.program { min-height: 380px; background-color: transparent; perspective: 1000px; transition: all 0.5s ease; }
-.program-inner { position: relative; width: 100%; height: 100%; transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1); transform-style: preserve-3d; }
-.program.expanded .program-inner { transform: rotateY(180deg); }
-.program.hidden { display: none; }
-.program.expanded { grid-column: 1 / -1; }
-
-.program-front, .program-back { position: absolute; width: 100%; height: 100%; -webkit-backface-visibility: hidden; backface-visibility: hidden; padding: 40px 30px; display: flex; flex-direction: column; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
-.program-front { background-color: #fff; border: 1px solid #eaeaea; color: #333; }
-.program-back { background-color: #111; color: #fff; transform: rotateY(180deg); }
-.program-front h3, .program-back h3 { margin-bottom: 15px; font-size: 22px; }
-.program-front p { font-size: 14px; color: #666; }
-.program-back p { font-size: 15px; color: #ccc; line-height: 1.7; }
-.program-price { font-size: 24px; font-weight: bold; color: #111; margin-top: 15px; }
+/* --- About Section --- */
+.about h2 { margin-bottom: 20px; }
+.about p { margin-bottom: 15px; color: #555; }
+.stats { display: flex; gap: 40px; margin-top: 40px; }
+.stat-item h3 { font-size: 32px; color: #111; }
+.stat-item p { font-size: 12px; color: #777; text-transform: uppercase; }
 
 /* --- Schedule Section --- */
 .schedule { position: relative; background-image: url('../assets/gym5-use.JPG'); background-size: cover; background-position: center; background-attachment: fixed; }
@@ -69,8 +82,8 @@ body { background-color: #ffffff; color: #333; line-height: 1.6; }
 .schedule-table th, .schedule-table td { padding: 15px; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.1); }
 .schedule-table th { font-weight: bold; color: #ccc; }
 
-/* --- Contact Section (New Layout) --- */
-.contact-wrapper { display: grid; grid-template-columns: 1fr; gap: 40px; background: #fafafa; padding: 40px; border-radius: 12px; border: 1px solid #eaeaea; }
+/* --- Contact Section --- */
+.contact-wrapper { display: grid; grid-template-columns: 1fr; gap: 40px; background: #fafafa; padding: 30px 20px; border-radius: 12px; border: 1px solid #eaeaea; }
 .info-block { margin-bottom: 25px; }
 .info-block h4 { font-size: 14px; text-transform: uppercase; letter-spacing: 1px; color: #888; margin-bottom: 5px; }
 .info-block p { font-size: 16px; font-weight: 500; color: #111; }
@@ -79,26 +92,56 @@ body { background-color: #ffffff; color: #333; line-height: 1.6; }
 .indemnity-box h4 { margin-bottom: 10px; color: #111; }
 .indemnity-box p { font-size: 13px; color: #666; margin-bottom: 15px; }
 
-.contact-form { background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.03); }
-.form-row { display: grid; grid-template-columns: 1fr; gap: 20px; }
+.contact-form { background: #fff; padding: 25px 20px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.03); }
+.form-row { display: grid; grid-template-columns: 1fr; gap: 15px; }
 .form-group { margin-bottom: 20px; }
 .form-group label { display: block; margin-bottom: 8px; font-size: 13px; font-weight: bold; color: #333; }
 .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 6px; font-size: 14px; background: #fdfdfd; transition: border 0.3s; }
 .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: #111; outline: none; }
 
+/* --- Footer Section --- */
+.site-footer { background: #000; color: #ccc; padding: 60px 20px 20px; border-top: 3px solid #222; }
+.footer-content { display: flex; flex-direction: column; gap: 40px; margin-bottom: 40px; }
+.footer-brand h2 { color: #fff; font-size: 20px; margin-bottom: 10px; letter-spacing: 1px; }
+.footer-brand p { font-size: 14px; color: #888; }
+.footer-links-col h4 { color: #fff; margin-bottom: 15px; text-transform: uppercase; font-size: 14px; }
+.footer-links-col ul { list-style: none; }
+.footer-links-col ul li { margin-bottom: 10px; }
+.footer-links-col ul li a { color: #aaa; text-decoration: none; font-size: 14px; transition: color 0.3s; }
+.footer-links-col ul li a:hover { color: #fff; }
+.footer-bottom { border-top: 1px solid #222; padding-top: 20px; font-size: 12px; color: #666; }
+
 /* --- Responsive Media Queries --- */
+@media (max-width: 767px) {
+    /* Mobile Menu Execution */
+    .menu-toggle { display: flex; }
+    .nav-links { 
+        display: none; flex-direction: column; width: 100%; 
+        position: absolute; top: 100%; left: 0; 
+        background: #000; padding: 20px 0; text-align: center; 
+        border-top: 1px solid #222;
+    }
+    .nav-links.active { display: flex; }
+    .nav-links li { margin: 15px 0; }
+    
+    /* Instructor Card Stack */
+    .instructor-card { flex-direction: column; align-items: center; text-align: center; }
+}
+
 @media (min-width: 768px) {
-    .nav-links { display: flex; }
     .hero-title { font-size: 56px; }
     .hero-subtitle { font-size: 26px; }
     
-    /* Here is the fix for the Programs layout: */
+    /* Program Cards shrink slightly on desktop since text fits better */
+    .program { height: 420px; }
     .program-grid { grid-template-columns: repeat(2, 1fr); }
     
     .form-row { grid-template-columns: 1fr 1fr; }
+    
+    .footer-content { flex-direction: row; justify-content: space-between; align-items: flex-start; }
 }
 
 @media (min-width: 992px) {
-    /* Here is the fix for the Contact layout: */
-    .contact-wrapper { grid-template-columns: 1fr 1.2fr; gap: 60px; padding: 60px; }
+    .contact-wrapper { grid-template-columns: 1fr 1.2fr; gap: 60px; padding: 50px; }
+    .contact-form { padding: 40px; }
 }
