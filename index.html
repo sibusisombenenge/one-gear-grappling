@@ -4,6 +4,40 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ONE GEAR GRAPPLING</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="One Gear Grappling offers Stand-Up and Brazilian Jiu-Jitsu training for all levels in Johannesburg. Led by former EFC Heavyweight Champion Andrew van Zyl.">
+  <meta name="keywords" content="MMA, BJJ, Boxing, Kickboxing, Johannesburg, Parktown, Martial Arts, Andrew van Zyl">
+
+  <!-- Open Graph / WhatsApp Preview -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ONE GEAR GRAPPLING | MMA & BJJ in Johannesburg">
+  <meta property="og:description" content="Stand-Up & Brazilian Jiu-Jitsu classes for all levels. Book a free trial today.">
+  <meta property="og:image" content="https://www.onegeargrappling.co.za/logo.jpg">
+  <meta property="og:url" content="https://www.onegeargrappling.co.za">
+
+  <!-- Local Business JSON-LD Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SportsActivityLocation",
+    "name": "One Gear Grappling",
+    "image": "https://www.onegeargrappling.co.za/logo.jpg",
+    "description": "Stand-Up and Brazilian Jiu-Jitsu training for adults and young athletes, led by former EFC Heavyweight Champion Andrew van Zyl.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "20 Wellington Rd, Parktown",
+      "addressLocality": "Johannesburg",
+      "addressRegion": "Gauteng",
+      "postalCode": "2193",
+      "addressCountry": "ZA"
+    },
+    "telephone": "+27813020360",
+    "email": "coach@onegeargrappling.co.za",
+    "priceRange": "R500-R750"
+  }
+  </script>
+
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -81,11 +115,6 @@
                 experience to every session — focused on discipline, technique,
                 and helping each athlete reach their potential.
               </p>
-              
-                href="https://www.tapology.com/fightcenter/fighters/17902-andrew-van-zyl-one-gear"
-                target="_blank"
-                class="btn secondary record-btn"
-              >View MMA Record</a>
             </article>
           </div>
         </div>
@@ -95,29 +124,28 @@
     <section id="programs" class="programs fade-in">
       <h2>Programs</h2>
       <article class="program">
-        <h3>Stand-Up</h3>
-        <p>
-          Striking classes covering boxing, kickboxing, footwork, combinations,
-          and conditioning — suitable for all experience levels.
-        </p>
-        <a href="#contact" class="btn secondary">Get in Touch</a>
+        <h3>Boxing / Kickboxing</h3>
+        <p>Striking classes covering boxing, kickboxing, footwork, combinations, and conditioning — suitable for all experience levels.</p>
+        <div class="program-price">R550 <span>/month</span></div>
+        <button class="btn secondary" onclick="prefillContact('Boxing / Kickboxing')">Get in Touch</button>
       </article>
       <article class="program">
         <h3>Brazilian Jiu-Jitsu</h3>
-        <p>
-          Structured BJJ classes focusing on ground control, submissions,
-          and positional training.
-        </p>
-        <a href="#contact" class="btn secondary">Get in Touch</a>
+        <p>Structured BJJ classes focusing on ground control, submissions, and positional training under a BJJ black belt professor.</p>
+        <div class="program-price">R550 <span>/month</span></div>
+        <button class="btn secondary" onclick="prefillContact('Brazilian Jiu-Jitsu')">Get in Touch</button>
+      </article>
+      <article class="program">
+        <h3>MMA</h3>
+        <p>A blend of Stand-Up and BJJ for those who want to train the complete game — striking, takedowns, and ground work combined.</p>
+        <div class="program-price">R750 <span>/month</span></div>
+        <button class="btn secondary" onclick="prefillContact('MMA')">Get in Touch</button>
       </article>
       <article class="program">
         <h3>Young Guns</h3>
-        <p>
-          A dedicated class open to all young athletes looking to build
-          discipline, fitness, and martial arts fundamentals from an early age.
-          Classes are held at Parktown Boys' High School in Johannesburg.
-        </p>
-        <a href="#contact" class="btn secondary">Get in Touch</a>
+        <p>A dedicated class offering BJJ/Stand-up/MMA open to all young athletes looking to build discipline, fitness, and martial arts fundamentals.</p>
+        <div class="program-price">R500 <span>/month</span></div>
+        <button class="btn secondary" onclick="prefillContact('Young Guns')">Get in Touch</button>
       </article>
     </section>
 
@@ -127,14 +155,14 @@
           <h2>Schedule</h2>
           <p class="schedule-note">
             Sessions run throughout the week. The times below give a general
-            indication — exact times are confirmed each week. Get in touch
-            with Andrew directly to find out more and get started.
+            indication — exact times are confirmed via the training WhatsApp group.
+            Contact Andrew directly to get added and stay in the loop.
           </p>
           <table class="schedule-table">
             <thead>
               <tr>
                 <th>Day</th>
-                <th>Approx. Time</th>
+                <th>Time</th>
                 <th>Class</th>
               </tr>
             </thead>
@@ -166,10 +194,6 @@
               </tr>
             </tbody>
           </table>
-          <p class="schedule-note" style="margin-top: 20px;">
-            Times may shift week to week. Contact Andrew to stay in the loop.
-          </p>
-          <a class="btn primary" href="https://wa.me/27000000000" target="_blank">WhatsApp Andrew</a>
         </div>
       </div>
     </section>
@@ -177,37 +201,77 @@
     <section id="contact" class="contact fade-in">
       <div class="contact-inner">
         <h2>Contact</h2>
-        <p>Ready to start? Get in touch and we'll take it from there.</p>
+        <p>Ready to start? Get in touch and Andrew will take it from there.</p>
+
         <div class="contact-details">
           <div class="contact-item">
             <span class="contact-label">Email</span>
             <a href="mailto:coach@onegeargrappling.co.za">coach@onegeargrappling.co.za</a>
           </div>
           <div class="contact-item">
-            <span class="contact-label">Phone</span>
-            <a href="tel:+27000000000">000 000 0000</a>
+            <span class="contact-label">WhatsApp</span>
+            <a href="https://wa.me/27813020360" target="_blank">+27 81 302 0360</a>
           </div>
           <div class="contact-item">
             <span class="contact-label">Location</span>
             <span>Parktown Boys' High School, 20 Wellington Rd, Parktown, Johannesburg, 2193</span>
           </div>
         </div>
-        <a class="btn primary" href="https://wa.me/27000000000" target="_blank">WhatsApp Andrew</a>
-        <form class="contact-form" name="contact" netlify>
-          <input type="hidden" name="form-name" value="contact">
+
+        <div class="indemnity-notice">
+          <p>
+            <strong>Before your first session</strong> — all new members must complete a signed indemnity form.
+            Download it below, sign it, and bring it along or send it to Andrew via WhatsApp before training.
+          </p>
+          <a href="indemnity.pdf" download class="btn secondary">Download Indemnity Form</a>
+        </div>
+
+        <!-- Netlify Enabled Form -->
+        <form class="contact-form" id="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+          
+          <!-- Hidden bot field to trap automated spam -->
+          <p style="display: none;">
+            <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+          </p>
+          
+          <!-- Hidden field to tell Netlify the form's name -->
+          <input type="hidden" name="form-name" value="contact" />
+
           <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Your name" required>
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="fname" placeholder="First name" required>
           </div>
           <div class="form-group">
-            <label for="email">Email</label>
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lname" placeholder="Last name" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="+27 81 234 5678" required>
+            <span class="field-error" id="phone-error"></span>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
             <input type="email" id="email" name="email" placeholder="your@email.com" required>
+            <span class="field-error" id="email-error"></span>
+          </div>
+          <div class="form-group">
+            <label for="program">Program of Interest</label>
+            <select id="program" name="program">
+              <option value="">Select a program</option>
+              <option value="Boxing / Kickboxing">Boxing / Kickboxing</option>
+              <option value="Brazilian Jiu-Jitsu">Brazilian Jiu-Jitsu</option>
+              <option value="MMA">MMA</option>
+              <option value="Young Guns">Young Guns</option>
+              <option value="Not sure yet">Not sure yet</option>
+            </select>
           </div>
           <div class="form-group">
             <label for="message">Message</label>
             <textarea id="message" name="message" rows="4" placeholder="I'd like to book a free trial..."></textarea>
           </div>
-          <button type="submit" class="btn primary">Send Message</button>
+          <button type="submit" class="btn primary" id="submit-btn">Send via WhatsApp</button>
+          <p class="form-note">Clicking send will open WhatsApp with your details pre-filled in a message to Andrew.</p>
           <p id="form-feedback" class="form-feedback"></p>
         </form>
       </div>

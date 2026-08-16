@@ -144,13 +144,13 @@ html {
   box-shadow: 0 8px 18px rgba(0,0,0,.3);
 }
 
-.btn.primary {
-  background: #fff;
-  color: #000;
+.btn.primary{
+    background:#111;
+    color:white;
 }
 
-.btn.primary:hover {
-  background: #e0e0e0;
+.btn.primary:hover{
+    background:#222;
 }
 
 .btn.secondary {
@@ -407,12 +407,11 @@ html {
   gap: 2px;
 }
 
-.contact-label {
-  font-size: 12px;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: #999;
+.contact-label{
+    color:#111;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:.08em;
 }
 
 .contact-item a,
@@ -433,36 +432,55 @@ html {
   margin-top: 40px;
 }
 
-.form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
 .form-group label {
-  font-size: 13px;
-  font-weight: bold;
-  color: #333;
+  font-size: 14px;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 6px;
 }
 
 .form-group input,
-.form-group textarea {
-  padding: 10px 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-family: inherit;
-  font-size: 14px;
+.form-group textarea,
+.form-group select {
   width: 100%;
+  padding: 14px 16px;
+  background: #fafafa;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  font-size: 15px;
+  font-family: inherit;
+  transition:
+      border-color .25s ease,
+      background .25s ease,
+      box-shadow .25s ease;
 }
 
 .form-group input:focus,
-.form-group textarea:focus {
-  outline: 2px solid #333;
-  border-color: transparent;
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #111;
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(0,0,0,.08);
 }
 
-.contact-form button {
-  cursor: pointer;
+.contact-form button{
+  background:#111;
+  color:white;
+  border:none;
+  border-radius:6px;
+  padding:15px;
+  font-size:15px;
+  font-weight:600;
+  cursor:pointer;
+  transition:
+      background .25s ease,
+      transform .2s ease;
+}
+
+.contact-form button:hover{
+    background:#000;
+    transform:translateY(-2px);
 }
 
 .form-feedback {
@@ -555,5 +573,89 @@ html {
   .contact-details {
     flex-direction: row;
     gap: 40px;
+  }
+
+  /* PROGRAM PRICE */
+  .program-price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #111;
+    margin: 12px 0 8px;
+  }
+
+  .program-price span {
+    font-size: 13px;
+    font-weight: normal;
+    color: #777;
+  }
+
+  /* INDEMNITY NOTICE */
+  .indemnity-notice{
+      background:#f7f7f7;
+      border-left:4px solid #111;
+      border-radius:6px;
+      padding:24px;
+      margin:32px 0;
+  }
+
+  .indemnity-notice p{
+      color:#555;
+      margin-bottom:18px;
+  }
+
+  /* FIELD ERRORS */
+  .field-error {
+    font-size: 12px;
+    color: #c0392b;
+    margin-top: 4px;
+    display: block;
+    min-height: 16px;
+  }
+
+  /* FORM NOTE */
+  .form-note {
+    font-size: 12px;
+    color: #888;
+    margin-top: 4px;
+  }
+
+  /* SELECT */
+  .form-group select {
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 14px;
+    width: 100%;
+    background: #fff;
+    cursor: pointer;
+  }
+
+  .form-group select:focus {
+    outline: 2px solid #333;
+    border-color: transparent;
+  }
+}
+
+/* ################################################ */
+/* ACCESSIBILITY: REDUCED MOTION                    */
+/* ################################################ */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  
+  .fade-in {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  
+  .program, .instructor-card, .btn {
+    transition: none !important;
+  }
+  
+  .program:hover, .instructor-card:hover, .btn:hover {
+    transform: none;
   }
 }
