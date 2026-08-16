@@ -262,7 +262,6 @@
     </section>
 
     <script>
-        // Interactive Expanding Programs Logic
         function expandProgram(id) {
             const grid = document.getElementById('programGrid');
             const cards = grid.querySelectorAll('.program');
@@ -277,7 +276,6 @@
                 }
             });
 
-            // Smooth scroll so the expanded card is perfectly in view
             setTimeout(() => {
                 document.getElementById('programs').scrollIntoView({ behavior: 'smooth', block: 'start' });
             }, 300);
@@ -293,7 +291,6 @@
             });
         }
 
-        // WhatsApp Logic
         function sendWhatsApp() {
             const firstName = document.getElementById('firstName').value;
             const lastName = document.getElementById('lastName').value;
