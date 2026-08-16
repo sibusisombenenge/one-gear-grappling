@@ -68,7 +68,7 @@
         </div>
     </section>
 
-    <!-- Programs Section (Interactive) -->
+    <!-- Programs Section -->
     <section id="programs" class="programs">
         <div class="container">
             <h2 class="text-center">Programs</h2>
@@ -201,63 +201,71 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2>Contact</h2>
-            <p>Ready to start? Get in touch and Andrew will take it from there.</p>
+            <div class="text-center">
+                <h2>Contact Us</h2>
+                <p style="margin-bottom: 40px; color: #555;">Ready to start? Get in touch and Andrew will take it from there.</p>
+            </div>
             
-            <div class="contact-info-grid">
-                <div>
-                    <h4>Email</h4>
-                    <p>coach@onegeargrappling.co.za</p>
+            <div class="contact-wrapper">
+                <!-- Left Side: Info & Indemnity -->
+                <div class="contact-left">
+                    <div class="contact-info-list">
+                        <div class="info-block">
+                            <h4>Email</h4>
+                            <p>coach@onegeargrappling.co.za</p>
+                        </div>
+                        <div class="info-block">
+                            <h4>WhatsApp</h4>
+                            <p>+27 81 303 0360</p>
+                        </div>
+                        <div class="info-block">
+                            <h4>Location</h4>
+                            <p>Parktown Boys' High School, 20 Wellington Rd, Parktown, Johannesburg, 2193</p>
+                        </div>
+                    </div>
+                    
+                    <div class="indemnity-box">
+                        <h4>New Members</h4>
+                        <p>Before your first session, all new members must complete a signed indemnity form. Download it below and send it to Andrew via WhatsApp.</p>
+                        <a href="assets/indemnity.pdf" class="btn secondary full-width" target="_blank">Download Form</a>
+                    </div>
                 </div>
-                <div>
-                    <h4>WhatsApp</h4>
-                    <p>+27 81 303 0360</p>
-                </div>
-                <div>
-                    <h4>Location</h4>
-                    <p>Parktown Boys' High School, 20 Wellington Rd, Parktown, Johannesburg, 2193</p>
+
+                <!-- Right Side: Form -->
+                <div class="contact-right">
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>First Name</label>
+                                <input type="text" id="firstName" placeholder="First name">
+                            </div>
+                            <div class="form-group">
+                                <label>Last Name</label>
+                                <input type="text" id="lastName" placeholder="Last name">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Phone Number</label>
+                            <input type="tel" id="phone" placeholder="+27 81 234 5678">
+                        </div>
+                        <div class="form-group">
+                            <label>Program of Interest</label>
+                            <select id="programSelect">
+                                <option value="">Select a program</option>
+                                <option value="Boxing / Kickboxing">Boxing / Kickboxing</option>
+                                <option value="BJJ">Brazilian Jiu-Jitsu</option>
+                                <option value="MMA">MMA</option>
+                                <option value="Young Guns">Young Guns</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea id="message" rows="4" placeholder="I'd like to book a free trial..."></textarea>
+                        </div>
+                        <button type="button" class="btn primary full-width" onclick="sendWhatsApp()">Send via WhatsApp</button>
+                    </form>
                 </div>
             </div>
-
-            <div class="indemnity-box">
-                <p><strong>Before your first session</strong> — all new members must complete a signed indemnity form. Download it below, sign it, and bring it along or send it to Andrew via WhatsApp before training.</p>
-                <a href="assets/indemnity.pdf" class="btn secondary" target="_blank">Download Indemnity Form</a>
-            </div>
-
-            <form id="contactForm" class="contact-form">
-                <div class="form-group">
-                    <label>First Name</label>
-                    <input type="text" id="firstName" placeholder="First name">
-                </div>
-                <div class="form-group">
-                    <label>Last Name</label>
-                    <input type="text" id="lastName" placeholder="Last name">
-                </div>
-                <div class="form-group">
-                    <label>Phone Number</label>
-                    <input type="tel" id="phone" placeholder="+27 81 234 5678">
-                </div>
-                <div class="form-group">
-                    <label>Email Address</label>
-                    <input type="email" id="email" placeholder="your@email.com">
-                </div>
-                <div class="form-group">
-                    <label>Program of Interest</label>
-                    <select id="programSelect">
-                        <option value="">Select a program</option>
-                        <option value="Boxing / Kickboxing">Boxing / Kickboxing</option>
-                        <option value="BJJ">Brazilian Jiu-Jitsu</option>
-                        <option value="MMA">MMA</option>
-                        <option value="Young Guns">Young Guns</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label>Message</label>
-                    <textarea id="message" rows="4" placeholder="I'd like to book a free trial..."></textarea>
-                </div>
-                <button type="button" class="btn primary full-width" onclick="sendWhatsApp()">Send via WhatsApp</button>
-                <p class="form-disclaimer">Clicking send will open WhatsApp with your details pre-filled in a message to Andrew.</p>
-            </form>
         </div>
     </section>
 
@@ -275,16 +283,12 @@
                     card.classList.remove('expanded');
                 }
             });
-
-            setTimeout(() => {
-                document.getElementById('programs').scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }, 300);
+            setTimeout(() => { document.getElementById('programs').scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 300);
         }
 
         function closeProgram() {
             const grid = document.getElementById('programGrid');
             const cards = grid.querySelectorAll('.program');
-            
             cards.forEach(card => {
                 card.classList.remove('expanded');
                 card.classList.remove('hidden');
@@ -298,10 +302,7 @@
             const message = document.getElementById('message').value;
             
             const text = `Hi Andrew, my name is ${firstName} ${lastName}. I am interested in the ${program} program. ${message}`;
-            const encodedText = encodeURIComponent(text);
-            const whatsappUrl = `https://wa.me/27813030360?text=${encodedText}`;
-            
-            window.open(whatsappUrl, '_blank');
+            window.open(`https://wa.me/27813030360?text=${encodeURIComponent(text)}`, '_blank');
         }
     </script>
 </body>

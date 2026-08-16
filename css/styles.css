@@ -1,293 +1,104 @@
 /* --- Base Resets & Typography --- */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-
-body {
-    background-color: #ffffff;
-    color: #333;
-    line-height: 1.6;
-}
-
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+body { background-color: #ffffff; color: #333; line-height: 1.6; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 .text-center { text-align: center; }
 
 /* --- Buttons --- */
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-    border: none;
-    text-align: center;
-}
-
+.btn { display: inline-block; padding: 12px 20px; text-decoration: none; font-weight: bold; border-radius: 4px; cursor: pointer; transition: background 0.3s ease; border: none; text-align: center; }
 .btn.primary { background: #111; color: #fff; }
 .btn.primary:hover { background: #333; }
 .btn.secondary { background: #333; color: #fff; }
 .btn.secondary:hover { background: #555; }
 .btn-large { padding: 16px 32px; font-size: 16px; margin-top: 24px; }
 .full-width { width: 100%; }
-.button-group {
-    display: flex;
-    gap: 10px;
-    margin-top: auto; 
-    padding-top: 20px;
-}
+.button-group { display: flex; gap: 10px; margin-top: auto; padding-top: 20px; }
 
 /* --- Navigation --- */
-.navbar {
-    background: #000;
-    color: #fff;
-    padding: 15px 0;
-}
-.nav-container {
-    max-width: 1100px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-}
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-.nav-links a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 14px;
-}
-.logo-img { 
-    height: 70px; 
-    width: auto; 
-    display: block; 
-    filter: invert(1); 
-}
+.navbar { background: #000; color: #fff; padding: 15px 0; }
+.nav-container { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; }
+.nav-links { list-style: none; display: flex; gap: 20px; }
+.nav-links a { color: #fff; text-decoration: none; font-size: 14px; }
+.logo-img { height: 70px; width: auto; display: block; filter: invert(1); }
 
 /* --- Hero Section --- */
-.hero { 
-    background: #111; 
-    color: #fff; 
-    padding: 140px 20px; 
-    text-align: center; 
-}
-.hero-title { 
-    font-size: 32px; 
-    letter-spacing: 2px; 
-    color: #fff; 
-    margin-bottom: 5px; 
-}
-.hero-subtitle { 
-    font-size: 18px; 
-    font-weight: normal; 
-    color: #aaa; 
-    margin-bottom: 15px; 
-}
-.hero p { 
-    color: #888; 
-    margin-bottom: 10px; 
-}
+.hero { background: #111; color: #fff; padding: 140px 20px; text-align: center; }
+.hero-title { font-size: 32px; letter-spacing: 2px; color: #fff; margin-bottom: 5px; }
+.hero-subtitle { font-size: 18px; font-weight: normal; color: #aaa; margin-bottom: 15px; }
+.hero p { color: #888; margin-bottom: 10px; }
 
 /* --- Shared Section Spacing --- */
 .about, .programs, .contact { padding: 100px 20px; }
-.instructors-overlay, .schedule-overlay { 
-    padding: 100px 20px; 
-    background: rgba(0, 0, 0, 0.85); 
-    color: #fff;
-}
+.instructors-overlay, .schedule-overlay { padding: 100px 20px; background: rgba(0, 0, 0, 0.85); color: #fff; }
 
 /* --- About Section --- */
 .about h2 { margin-bottom: 20px; }
 .about p { margin-bottom: 15px; color: #555; }
-.stats {
-    display: flex;
-    gap: 40px;
-    margin-top: 40px;
-}
+.stats { display: flex; gap: 40px; margin-top: 40px; }
 .stat-item h3 { font-size: 32px; color: #111; }
 .stat-item p { font-size: 12px; color: #777; text-transform: uppercase; }
 
-/* --- Instructor Section (Parallax) --- */
-.instructors { 
-    position: relative; 
-    background-image: url('../assets/coach.jpg'); 
-    background-size: cover; 
-    background-position: center; 
-    background-attachment: fixed; 
-}
-.instructor-card {
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
-    margin-top: 30px;
-    background: rgba(255, 255, 255, 0.05);
-    padding: 30px;
-    border: 1px solid rgba(255,255,255,0.1);
-}
-.avatar {
-    width: 60px;
-    height: 60px;
-    background: #fff;
-    color: #000;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    flex-shrink: 0;
-}
+/* --- Instructor Section --- */
+.instructors { position: relative; background-image: url('../assets/coach.jpg'); background-size: cover; background-position: center; background-attachment: fixed; }
+.instructor-card { display: flex; align-items: flex-start; gap: 20px; margin-top: 30px; background: rgba(255, 255, 255, 0.05); padding: 30px; border: 1px solid rgba(255,255,255,0.1); }
+.avatar { width: 60px; height: 60px; background: #fff; color: #000; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0; }
 .instructor-info h3 { margin-bottom: 5px; }
 .instructor-info .role { font-size: 12px; color: #aaa; margin-bottom: 15px; }
 .instructor-info .bio { font-size: 14px; color: #ddd; line-height: 1.5; }
 
-/* --- Interactive Programs Section --- */
+/* --- Programs Section (2x2 Grid Fix) --- */
 .programs h2 { margin-bottom: 40px; }
-.program-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-    perspective: 1000px;
-}
+.program-grid { display: grid; grid-template-columns: 1fr; gap: 30px; perspective: 1000px; }
+.program { min-height: 380px; background-color: transparent; perspective: 1000px; transition: all 0.5s ease; }
+.program-inner { position: relative; width: 100%; height: 100%; transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1); transform-style: preserve-3d; }
+.program.expanded .program-inner { transform: rotateY(180deg); }
+.program.hidden { display: none; }
+.program.expanded { grid-column: 1 / -1; }
 
-/* Program Card Physics Container */
-.program {
-    min-height: 380px;
-    background-color: transparent;
-    perspective: 1000px; /* Required for 3D effect */
-    transition: all 0.5s ease-in-out;
-}
-
-.program-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
-    transform-style: preserve-3d;
-}
-
-/* Flipped State */
-.program.expanded .program-inner {
-    transform: rotateY(180deg);
-}
-
-/* Hiding other cards when one expands */
-.program.hidden {
-    display: none;
-}
-
-/* Expanded Grid Layout */
-.program.expanded {
-    grid-column: 1 / -1; /* Forces it to span the entire row */
-}
-
-/* Front & Back Faces */
-.program-front, .program-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden; /* Safari */
-    backface-visibility: hidden;
-    padding: 30px 20px;
-    display: flex;
-    flex-direction: column;
-    border: 1px solid #ddd;
-}
-
-.program-front {
-    background-color: #fafafa;
-    color: #333;
-}
-
-.program-back {
-    background-color: #111;
-    color: #fff;
-    transform: rotateY(180deg);
-    border-color: #333;
-}
-
-.program-front h3, .program-back h3 { margin-bottom: 15px; }
-.program-front p { font-size: 14px; color: #555; }
+.program-front, .program-back { position: absolute; width: 100%; height: 100%; -webkit-backface-visibility: hidden; backface-visibility: hidden; padding: 40px 30px; display: flex; flex-direction: column; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+.program-front { background-color: #fff; border: 1px solid #eaeaea; color: #333; }
+.program-back { background-color: #111; color: #fff; transform: rotateY(180deg); }
+.program-front h3, .program-back h3 { margin-bottom: 15px; font-size: 22px; }
+.program-front p { font-size: 14px; color: #666; }
 .program-back p { font-size: 15px; color: #ccc; line-height: 1.7; }
+.program-price { font-size: 24px; font-weight: bold; color: #111; margin-top: 15px; }
 
-.program-price {
-    font-size: 20px;
-    font-weight: bold;
-    color: #111;
-    margin-top: 15px; 
-}
-
-/* --- Schedule Section (Parallax) --- */
-.schedule { 
-    position: relative; 
-    background-image: url('../assets/gym5-use.JPG'); 
-    background-size: cover; 
-    background-position: center; 
-    background-attachment: fixed; 
-}
-.schedule-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 30px;
-    font-size: 14px;
-}
-.schedule-table th, .schedule-table td {
-    padding: 15px;
-    text-align: left;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-}
+/* --- Schedule Section --- */
+.schedule { position: relative; background-image: url('../assets/gym5-use.JPG'); background-size: cover; background-position: center; background-attachment: fixed; }
+.schedule-table { width: 100%; border-collapse: collapse; margin-top: 30px; font-size: 14px; }
+.schedule-table th, .schedule-table td { padding: 15px; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.1); }
 .schedule-table th { font-weight: bold; color: #ccc; }
 
-/* --- Contact Section --- */
-.contact-info-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-    margin: 40px 0;
-}
-.contact-info-grid h4 { margin-bottom: 5px; }
-.contact-info-grid p { font-size: 14px; color: #555; }
+/* --- Contact Section (New Layout) --- */
+.contact-wrapper { display: grid; grid-template-columns: 1fr; gap: 40px; background: #fafafa; padding: 40px; border-radius: 12px; border: 1px solid #eaeaea; }
+.info-block { margin-bottom: 25px; }
+.info-block h4 { font-size: 14px; text-transform: uppercase; letter-spacing: 1px; color: #888; margin-bottom: 5px; }
+.info-block p { font-size: 16px; font-weight: 500; color: #111; }
 
-.indemnity-box {
-    background: #f4f4f4;
-    padding: 20px;
-    margin-bottom: 40px;
-    border-left: 4px solid #111;
-}
-.indemnity-box p { font-size: 14px; margin-bottom: 15px; }
+.indemnity-box { background: #fff; padding: 25px; border-radius: 8px; border-left: 4px solid #111; box-shadow: 0 4px 10px rgba(0,0,0,0.03); margin-top: 20px; }
+.indemnity-box h4 { margin-bottom: 10px; color: #111; }
+.indemnity-box p { font-size: 13px; color: #666; margin-bottom: 15px; }
 
-.contact-form {
-    max-width: 600px;
-    margin: 0 auto;
-}
+.contact-form { background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.03); }
+.form-row { display: grid; grid-template-columns: 1fr; gap: 20px; }
 .form-group { margin-bottom: 20px; }
-.form-group label { display: block; margin-bottom: 5px; font-size: 12px; font-weight: bold; }
-.form-group input, .form-group select, .form-group textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 14px;
-}
-.form-disclaimer { text-align: center; font-size: 11px; color: #888; margin-top: 10px; }
+.form-group label { display: block; margin-bottom: 8px; font-size: 13px; font-weight: bold; color: #333; }
+.form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 6px; font-size: 14px; background: #fdfdfd; transition: border 0.3s; }
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: #111; outline: none; }
 
 /* --- Responsive Media Queries --- */
 @media (min-width: 768px) {
     .nav-links { display: flex; }
     .hero-title { font-size: 56px; }
     .hero-subtitle { font-size: 26px; }
-    .program-grid { grid-template-columns: repeat(3, 1fr); }
-    .contact-info-grid { grid-template-columns: repeat(3, 1fr); }
+    
+    /* Here is the fix for the Programs layout: */
+    .program-grid { grid-template-columns: repeat(2, 1fr); }
+    
+    .form-row { grid-template-columns: 1fr 1fr; }
+}
+
+@media (min-width: 992px) {
+    /* Here is the fix for the Contact layout: */
+    .contact-wrapper { grid-template-columns: 1fr 1.2fr; gap: 60px; padding: 60px; }
 }
