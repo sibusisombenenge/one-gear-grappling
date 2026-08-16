@@ -68,35 +68,104 @@
         </div>
     </section>
 
-    <!-- Programs Section -->
+    <!-- Programs Section (Interactive) -->
     <section id="programs" class="programs">
         <div class="container">
             <h2 class="text-center">Programs</h2>
-            <div class="program-grid">
-                <div class="program">
-                    <h3>Boxing / Kickboxing</h3>
-                    <p>Striking classes covering boxing, kickboxing, footwork, combinations, and conditioning — suitable for all experience levels.</p>
-                    <p class="program-price">R550 <small>/month</small></p>
-                    <a href="#contact" class="btn secondary">Get in Touch</a>
+            <div class="program-grid" id="programGrid">
+                
+                <!-- Program 1 -->
+                <div class="program" id="prog1">
+                    <div class="program-inner">
+                        <div class="program-front">
+                            <h3>Boxing / Kickboxing</h3>
+                            <p>Striking classes covering boxing, kickboxing, footwork, combinations, and conditioning — suitable for all experience levels.</p>
+                            <p class="program-price">R550 <small>/month</small></p>
+                            <div class="button-group">
+                                <button class="btn primary full-width" onclick="expandProgram('prog1')">Find Out More</button>
+                                <a href="#contact" class="btn secondary full-width">Book Trial</a>
+                            </div>
+                        </div>
+                        <div class="program-back">
+                            <h3>Boxing / Kickboxing Details</h3>
+                            <p>Our striking program is designed to build devastating power, speed, and precision. You will learn the mechanics of European Boxing mixed with Dutch-style Kickboxing. Sessions include pad work, heavy bag conditioning, shadow boxing, and controlled technical sparring to test your skills safely.</p>
+                            <div class="button-group">
+                                <button class="btn secondary full-width" onclick="closeProgram()">Back</button>
+                                <a href="#contact" class="btn primary full-width">Join Now</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="program">
-                    <h3>Brazilian Jiu-Jitsu</h3>
-                    <p>Structured BJJ classes focusing on ground control, submissions, and positional training under a BJJ black belt professor.</p>
-                    <p class="program-price">R550 <small>/month</small></p>
-                    <a href="#contact" class="btn secondary">Get in Touch</a>
+
+                <!-- Program 2 -->
+                <div class="program" id="prog2">
+                    <div class="program-inner">
+                        <div class="program-front">
+                            <h3>Brazilian Jiu-Jitsu</h3>
+                            <p>Structured BJJ classes focusing on ground control, submissions, and positional training under a BJJ black belt professor.</p>
+                            <p class="program-price">R550 <small>/month</small></p>
+                            <div class="button-group">
+                                <button class="btn primary full-width" onclick="expandProgram('prog2')">Find Out More</button>
+                                <a href="#contact" class="btn secondary full-width">Book Trial</a>
+                            </div>
+                        </div>
+                        <div class="program-back">
+                            <h3>Brazilian Jiu-Jitsu Details</h3>
+                            <p>BJJ is the ultimate grappling art, empowering smaller individuals to submit larger opponents using leverage and technique. Under Professor Andrew van Zyl, you will dive deep into gi and no-gi techniques, focusing on sweeps, guard passing, escapes, and submission holds in a highly analytical yet intense environment.</p>
+                            <div class="button-group">
+                                <button class="btn secondary full-width" onclick="closeProgram()">Back</button>
+                                <a href="#contact" class="btn primary full-width">Join Now</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="program">
-                    <h3>MMA</h3>
-                    <p>A blend of Stand-Up and BJJ for those who want to train the complete game — striking, takedowns, and ground work combined.</p>
-                    <p class="program-price">R750 <small>/month</small></p>
-                    <a href="#contact" class="btn secondary">Get in Touch</a>
+
+                <!-- Program 3 -->
+                <div class="program" id="prog3">
+                    <div class="program-inner">
+                        <div class="program-front">
+                            <h3>MMA</h3>
+                            <p>A blend of Stand-Up and BJJ for those who want to train the complete game — striking, takedowns, and ground work combined.</p>
+                            <p class="program-price">R750 <small>/month</small></p>
+                            <div class="button-group">
+                                <button class="btn primary full-width" onclick="expandProgram('prog3')">Find Out More</button>
+                                <a href="#contact" class="btn secondary full-width">Book Trial</a>
+                            </div>
+                        </div>
+                        <div class="program-back">
+                            <h3>Mixed Martial Arts Details</h3>
+                            <p>To succeed in MMA, you need to seamlessly transition between striking, wrestling, and ground combat. This comprehensive program blends elite kickboxing with cage wrestling and submission grappling. It is perfect for those looking to compete, or simply wanting the ultimate, all-encompassing physical challenge.</p>
+                            <div class="button-group">
+                                <button class="btn secondary full-width" onclick="closeProgram()">Back</button>
+                                <a href="#contact" class="btn primary full-width">Join Now</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="program">
-                    <h3>Young Guns</h3>
-                    <p>A dedicated class offering BJJ/Stand-up/MMA open to all young athletes looking to build discipline, fitness, and martial arts fundamentals.</p>
-                    <p class="program-price">R500 <small>/month</small></p>
-                    <a href="#contact" class="btn secondary">Get in Touch</a>
+
+                <!-- Program 4 -->
+                <div class="program" id="prog4">
+                    <div class="program-inner">
+                        <div class="program-front">
+                            <h3>Young Guns</h3>
+                            <p>A dedicated class offering BJJ/Stand-up/MMA open to all young athletes looking to build discipline, fitness, and martial arts fundamentals.</p>
+                            <p class="program-price">R500 <small>/month</small></p>
+                            <div class="button-group">
+                                <button class="btn primary full-width" onclick="expandProgram('prog4')">Find Out More</button>
+                                <a href="#contact" class="btn secondary full-width">Book Trial</a>
+                            </div>
+                        </div>
+                        <div class="program-back">
+                            <h3>Young Guns Details</h3>
+                            <p>Martial arts are unparalleled for instilling confidence, respect, and physical fitness in youth. Our Young Guns program scales down advanced BJJ and striking concepts into an engaging, safe, and highly structured format. We focus on bully-proofing, athletic coordination, and character building on and off the mats.</p>
+                            <div class="button-group">
+                                <button class="btn secondary full-width" onclick="closeProgram()">Back</button>
+                                <a href="#contact" class="btn primary full-width">Join Now</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -193,6 +262,38 @@
     </section>
 
     <script>
+        // Interactive Expanding Programs Logic
+        function expandProgram(id) {
+            const grid = document.getElementById('programGrid');
+            const cards = grid.querySelectorAll('.program');
+            
+            cards.forEach(card => {
+                if(card.id === id) {
+                    card.classList.add('expanded');
+                    card.classList.remove('hidden');
+                } else {
+                    card.classList.add('hidden');
+                    card.classList.remove('expanded');
+                }
+            });
+
+            // Smooth scroll so the expanded card is perfectly in view
+            setTimeout(() => {
+                document.getElementById('programs').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 300);
+        }
+
+        function closeProgram() {
+            const grid = document.getElementById('programGrid');
+            const cards = grid.querySelectorAll('.program');
+            
+            cards.forEach(card => {
+                card.classList.remove('expanded');
+                card.classList.remove('hidden');
+            });
+        }
+
+        // WhatsApp Logic
         function sendWhatsApp() {
             const firstName = document.getElementById('firstName').value;
             const lastName = document.getElementById('lastName').value;

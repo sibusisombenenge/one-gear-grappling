@@ -39,6 +39,12 @@ body {
 .btn.secondary:hover { background: #555; }
 .btn-large { padding: 16px 32px; font-size: 16px; margin-top: 24px; }
 .full-width { width: 100%; }
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-top: auto; 
+    padding-top: 20px;
+}
 
 /* --- Navigation --- */
 .navbar {
@@ -147,29 +153,80 @@ body {
 .instructor-info .role { font-size: 12px; color: #aaa; margin-bottom: 15px; }
 .instructor-info .bio { font-size: 14px; color: #ddd; line-height: 1.5; }
 
-/* --- Programs Section (Flexbox Auto-margin Fix) --- */
+/* --- Interactive Programs Section --- */
 .programs h2 { margin-bottom: 40px; }
 .program-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
+    perspective: 1000px;
 }
+
+/* Program Card Physics Container */
 .program {
-    border: 1px solid #ddd;
+    min-height: 380px;
+    background-color: transparent;
+    perspective: 1000px; /* Required for 3D effect */
+    transition: all 0.5s ease-in-out;
+}
+
+.program-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transform-style: preserve-3d;
+}
+
+/* Flipped State */
+.program.expanded .program-inner {
+    transform: rotateY(180deg);
+}
+
+/* Hiding other cards when one expands */
+.program.hidden {
+    display: none;
+}
+
+/* Expanded Grid Layout */
+.program.expanded {
+    grid-column: 1 / -1; /* Forces it to span the entire row */
+}
+
+/* Front & Back Faces */
+.program-front, .program-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
     padding: 30px 20px;
-    background: #fafafa;
     display: flex;
     flex-direction: column;
-    height: 100%;
+    border: 1px solid #ddd;
 }
-.program h3 { margin-bottom: 15px; }
-.program p { margin-bottom: 20px; font-size: 14px; color: #555; }
+
+.program-front {
+    background-color: #fafafa;
+    color: #333;
+}
+
+.program-back {
+    background-color: #111;
+    color: #fff;
+    transform: rotateY(180deg);
+    border-color: #333;
+}
+
+.program-front h3, .program-back h3 { margin-bottom: 15px; }
+.program-front p { font-size: 14px; color: #555; }
+.program-back p { font-size: 15px; color: #ccc; line-height: 1.7; }
+
 .program-price {
     font-size: 20px;
     font-weight: bold;
     color: #111;
-    margin-top: auto; 
-    margin-bottom: 15px !important;
+    margin-top: 15px; 
 }
 
 /* --- Schedule Section (Parallax) --- */
