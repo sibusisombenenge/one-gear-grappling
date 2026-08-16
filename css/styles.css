@@ -247,7 +247,7 @@ html {
 /* INSTRUCTORS */
 .instructors {
   position: relative;
-  background-image: url('coach.jpg');
+  background-image: url('../assets/coach.jpg');
   background-size: cover;
   background-position: center top;
 }
@@ -320,7 +320,7 @@ html {
 /* SCHEDULE */
 .schedule {
   position: relative;
-  background-image: url('gym5-use.JPG');
+  background-image: url('../assets/gym5-use.JPG');
   background-size: cover;
   background-position: center;
 }
